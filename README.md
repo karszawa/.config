@@ -1,3 +1,3 @@
 ```
-$ curl -s https://github.com/karszawa/.config/blob/master/setup.sh | bash -s
+$ curl -s https://raw.githubusercontent.com/karszawa/.config/master/setup.sh | bash -s
 ```
