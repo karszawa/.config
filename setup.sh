@@ -1,5 +1,7 @@
 cd ~
 
+echo '# SET UP homebrew'
+
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew install hub
@@ -10,6 +12,20 @@ brew bundle install --file=~/.config/Brewfile
 
 # set up fish
 
+echo '# SET UP fish'
+
+curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+
+fisher
+
 # set up vim
 
+# set up iterm
+
 # set up vscode
+
+# set up gcloud
+
+echo '# SET UP google-cloud-sdk'
+
+curl https://sdk.cloud.google.com | bash
