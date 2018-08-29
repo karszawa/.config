@@ -10,21 +10,32 @@ hub clone --depth=1 https://github.com/karszawa/.config
 
 brew bundle install --file=~/.config/Brewfile
 
-# set up fish
-
 echo '# SET UP fish'
 
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 
 fisher
 
-# set up vim
+echo '# SET UP vim'
 
-# set up iterm
+ln -s .vim/ ../.vim
 
-# set up vscode
+mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-# set up gcloud
+git clone --depth=1 https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
+
+echo '# SET UP iTerm2'
+
+echo 'Open iTerm2 and check "Load preferences from a custom folder or URL" then fill text box with "~/.config/iterm2"'
+
+echo '# SET UP visual-studio-code'
+
+ln -s ~/.config/code/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s ~/.config/code/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+ln -s ~/.config/code/locale.json ~/Library/Application\ Support/Code/User/locale.json
+
+cat ~/.config/code/extensions.list | xargs -L1 code --install-extension
 
 echo '# SET UP google-cloud-sdk'
 
