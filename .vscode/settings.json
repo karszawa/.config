@@ -1,0 +1,28 @@
+{
+    "editor.find.autoFindInSelection": true,
+    "editor.fontSize": 13,
+    "editor.renderIndentGuides": false,
+    "editor.rulers": [ 80 ],
+    "editor.scrollBeyondLastLine": false,
+    "editor.tabSize": 2,
+    "editor.wordWrap": "on",
+    "explorer.autoReveal": false,
+    "files.autoSave": "onFocusChange",
+    "files.insertFinalNewline": true,
+    "search.location": "panel",
+    "team.showWelcomeMessage": false,
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Atom One Dark",
+    "workbench.startupEditor": "newUntitledFile",
+
+    "rust.rustup": {
+        "toolchain": "nightly-x86_64-apple-darwin",
+        "nightlyToolchain": "nightly-x86_64-apple-darwin"
+    },
+    "rust.mode": "rls",
+    "rust.rls": {
+        "useRustfmt": true
+    },
+    "explorer.confirmDelete": false,
+    "git.ignoreLimitWarning": true,
+}
