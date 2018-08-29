@@ -27,4 +27,12 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+*
+!fish
+!.vim
+!.vscode
+!iterm2
+!Brewfile
+!README.md
+!setup.sh
 
