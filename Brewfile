@@ -34,5 +34,8 @@ cask 'slack'
 cask 'sourcetree'
 cask 'spark'
 cask 'visual-studio-code'
+cask '1password'
+cask 'trailer'
+cask 'inkdrop'
 
 mas 'Spark', id: 1176895641
