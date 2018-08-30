@@ -37,5 +37,7 @@ cask 'visual-studio-code'
 cask '1password'
 cask 'trailer'
 cask 'inkdrop'
+cask 'docker'
+cask 'docker-toolbox'
 
 mas 'Spark', id: 1176895641
