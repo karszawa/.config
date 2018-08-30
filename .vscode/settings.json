@@ -7,11 +7,13 @@
     "editor.tabSize": 2,
     "editor.wordWrap": "on",
     "explorer.autoReveal": false,
+    "explorer.confirmDelete": false,
     "files.autoSave": "onFocusChange",
     "files.insertFinalNewline": true,
+    "git.ignoreLimitWarning": true,
     "search.location": "panel",
     "team.showWelcomeMessage": false,
-    "workbench.activityBar.visible": false,
+    "workbench.activityBar.visible": true,
     "workbench.colorTheme": "Atom One Dark",
     "workbench.startupEditor": "newUntitledFile",
 
@@ -23,6 +25,5 @@
     "rust.rls": {
         "useRustfmt": true
     },
-    "explorer.confirmDelete": false,
-    "git.ignoreLimitWarning": true,
+
 }
