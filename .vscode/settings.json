@@ -26,4 +26,5 @@
         "useRustfmt": true
     },
 
+    "eslint.packageManager": "yarn",
 }

@@ -3,9 +3,11 @@ akamud.vscode-theme-onedark
 christian-kohler.path-intellisense
 dbaeumer.vscode-eslint
 dzannotti.vscode-babel-coloring
+eamodio.gitlens
 ecmel.vscode-html-css
 eg2.tslint
 esbenp.prettier-vscode
+hollowtree.vue-snippets
 HookyQR.beautify
 johnpapa.Angular2
 kaiwood.endwise
@@ -14,7 +16,9 @@ lunaryorn.fish-ide
 mitaki28.vscode-clang
 ms-vscode.cpptools
 ms-vsts.team
+msjsdiag.debugger-for-chrome
 octref.vetur
+pranaygp.vscode-css-peek
 rust-lang.rust
 sianglim.slim
 skyapps.fish-vscode
@@ -22,3 +26,4 @@ sleistner.vscode-fileutils
 Tyriar.sort-lines
 vadimcn.vscode-lldb
 wayou.vscode-todo-highlight
+Zignd.html-css-class-completion
