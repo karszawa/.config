@@ -3,9 +3,14 @@
 # docker
 # .gitconfig
 
+declare failed_commands=""
 function trace {
   echo -e "\033[1m$@\033[0m" >&2
-  "$@"
+
+  if "$@"; then
+  else
+    failed_commands+="$@\n"
+  fi
 }
 
 declare step_counter=1
@@ -74,6 +79,9 @@ echo_step 'iTerm2'
 
 echo 'Open iTerm2 and check "Load preferences from a custom folder or URL" then fill text box with "~/.config/iterm2"'
 
-fish
-
-echo 'DONE'
+if [ failed_commands == "" ]; then
+  echo 'DONE'
+else
+  echo "\033[31mFailed to execute following commands:\033[0m"
+  echo -e failed_commands
+fi
