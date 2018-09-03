@@ -32,6 +32,15 @@ trace ln -s ~/.config/.gitconfig ~/.gitconfig
 trace ln -s ~/.config/.gitattributes ~/.gitattributes
 trace ln -s ~/.config/.gitignore-global ~/.gitignore-global
 
+echo_step 'pry'
+
+trace ln -s ~/.config/.pryrc ~/.pryrc
+trace sudo gem install pry
+trace sudo gem install pry-byebug
+trace sudo gem install pry-doc
+trace sudo gem install pry-rails
+trace sudo gem install pry-stack_explorer
+
 echo_step 'fish'
 
 trace curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
