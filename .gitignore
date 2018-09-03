@@ -31,6 +31,10 @@ Temporary Items
 !fish
 !.vim
 !.vscode
+!.gitattributes
+!.gitconfig
+!.gitignore
+!.gitignore-global
 !iterm2
 !Brewfile
 !README.md

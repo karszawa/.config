@@ -1,0 +1,41 @@
+[core]
+[user]
+	name = Hiroaki KARASAWA
+	email = siqvare@gmail.com
+[color]
+	ui = auto
+[core]
+	editor = emacs
+	excludesfile = ~/.gitignore-global
+	attributesfile = ~/.gitattributes-global
+[push]
+	default = current
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[diff]
+	compactionHeuristic = true
+	renames = true
+[pager]
+	log = diff-highlight | less
+	show = diff-highlight | less
+	diff = diff-highlight | less
+[alias]
+	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+	co = checkout
+	open = browse
+	pr = pull-request
+[commit]
+	template = ~/.stCommitMsg
+[merge "mergepbx"]
+	name = Xcode project files merger
+	driver = mergepbx %O %A %B
+[ghq]
+	root = ~/dev/src
