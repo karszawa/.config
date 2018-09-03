@@ -15,3 +15,5 @@ for path in $paths
     set -gx fish_user_paths $path $fish_user_paths
   end
 end
+
+source '~/.google/google-cloud-sdk/path.fish.inc'
