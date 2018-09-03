@@ -39,12 +39,8 @@ trace ln -s ~/.config/.gitignore-global ~/.gitignore-global
 
 echo_step 'pry'
 
-trace ln -s ~/.config/.pryrc ~/.pryrc
-trace sudo gem install pry
-trace sudo gem install pry-byebug
-trace sudo gem install pry-doc
-trace sudo gem install pry-rails
-trace sudo gem install pry-stack_explorer
+trace ln -s ~/.config/pry/.pryrc ~/.pryrc
+trace cat ~/.config/pry/gems.list | xargs -L1 code --install-extension
 
 echo_step 'fish'
 

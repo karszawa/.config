@@ -35,6 +35,7 @@ Temporary Items
 !.gitconfig
 !.gitignore
 !.gitignore-global
+!pry
 !iterm2
 !Brewfile
 !README.md
