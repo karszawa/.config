@@ -1,8 +1,4 @@
-# apple id
-# modify Brefile
 # docker
-# zshrc
-# git-highlight
 # .gitconfig
 
 cd ~
@@ -16,6 +12,12 @@ brew install hub
 hub clone --depth=1 https://github.com/karszawa/.config
 
 brew bundle install --file=~/.config/Brewfile
+
+echo '# SET UP git'
+
+ln -s ~/.config/.gitconfig ~/.gitconfig
+ln -s ~/.config/.gitattributes ~/.gitattributes
+ln -s ~/.config/.gitignore-global ~/.gitignore-global
 
 echo '# SET UP fish'
 
@@ -32,10 +34,6 @@ curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 git clone --depth=1 https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 
-echo '# SET UP iTerm2'
-
-echo 'Open iTerm2 and check "Load preferences from a custom folder or URL" then fill text box with "~/.config/iterm2"'
-
 echo '# SET UP visual-studio-code'
 
 ln -s ~/.config/code/settings.json ~/Library/Application\ Support/Code/User/settings.json
@@ -49,3 +47,11 @@ echo '# SET UP google-cloud-sdk'
 curl https://sdk.cloud.google.com | bash
 
 chsh -s /usr/local/bin/fish
+
+echo '# SET UP iTerm2'
+
+echo 'Open iTerm2 and check "Load preferences from a custom folder or URL" then fill text box with "~/.config/iterm2"'
+
+fish
+
+echo 'DONE'
