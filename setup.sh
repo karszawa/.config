@@ -1,5 +1,12 @@
+#!/bin/bash
+
 # docker
 # .gitconfig
+
+function trace {
+  echo -e "\033[1m$@\033[0m" >&2
+  "$@"
+}
 
 declare step_counter=1
 function echo_step {
@@ -11,48 +18,48 @@ cd ~
 
 echo_step 'homebrew'
 
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+trace /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew install hub
 
-hub clone --depth=1 https://github.com/karszawa/.config
+trace hub clone --depth=1 https://github.com/karszawa/.config
 
-brew bundle install --file=~/.config/Brewfile
+trace brew bundle install --file=~/.config/Brewfile
 
 echo_step 'git'
 
-ln -s ~/.config/.gitconfig ~/.gitconfig
-ln -s ~/.config/.gitattributes ~/.gitattributes
-ln -s ~/.config/.gitignore-global ~/.gitignore-global
+trace ln -s ~/.config/.gitconfig ~/.gitconfig
+trace ln -s ~/.config/.gitattributes ~/.gitattributes
+trace ln -s ~/.config/.gitignore-global ~/.gitignore-global
 
 echo_step 'fish'
 
-curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+trace curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 
-fisher
+trace fisher
 
 echo_step 'vim'
 
-ln -s .vim/ ../.vim
+trace ln -s .vim/ ../.vim
 
-mkdir -p ~/.vim/autoload ~/.vim/bundle && \
-curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+trace mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+trace curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
-git clone --depth=1 https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
+trace git clone --depth=1 https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
 
 echo_step 'Visual Studio Code'
 
-ln -s ~/.config/code/settings.json ~/Library/Application\ Support/Code/User/settings.json
-ln -s ~/.config/code/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
-ln -s ~/.config/code/locale.json ~/Library/Application\ Support/Code/User/locale.json
+trace ln -s ~/.config/code/settings.json ~/Library/Application\ Support/Code/User/settings.json
+trace ln -s ~/.config/code/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+trace ln -s ~/.config/code/locale.json ~/Library/Application\ Support/Code/User/locale.json
 
-cat ~/.config/.vscode/extensions.list | xargs -L1 code --install-extension
+trace cat ~/.config/.vscode/extensions.list | xargs -L1 code --install-extension
 
 echo_step 'google-cloud-sdk'
 
-curl https://sdk.cloud.google.com | bash
+trace curl https://sdk.cloud.google.com | bash --install-dir=~/.google
 
-chsh -s /usr/local/bin/fish
+trace chsh -s /usr/local/bin/fish
 
 echo_step 'iTerm2'
 
