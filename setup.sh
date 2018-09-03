@@ -1,3 +1,10 @@
+# apple id
+# modify Brefile
+# docker
+# zshrc
+# git-highlight
+# .gitconfig
+
 cd ~
 
 echo '# SET UP homebrew'
@@ -35,8 +42,10 @@ ln -s ~/.config/code/settings.json ~/Library/Application\ Support/Code/User/sett
 ln -s ~/.config/code/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
 ln -s ~/.config/code/locale.json ~/Library/Application\ Support/Code/User/locale.json
 
-cat ~/.config/code/extensions.list | xargs -L1 code --install-extension
+cat ~/.config/.vscode/extensions.list | xargs -L1 code --install-extension
 
 echo '# SET UP google-cloud-sdk'
 
 curl https://sdk.cloud.google.com | bash
+
+chsh -s /usr/local/bin/fish
