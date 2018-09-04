@@ -36,6 +36,8 @@ trace ln -s ~/.config/.gitconfig ~/.gitconfig
 trace ln -s ~/.config/.gitattributes ~/.gitattributes
 trace ln -s ~/.config/.gitignore-global ~/.gitignore-global
 
+echo -e "Host *\n  UseKeychain yes\n  AddKeysToAgent yes\n  IdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
+
 trace ssh-keygen -t rsa -b 4096 -C "siqvare@gmail.com"
 echo 'Visit https://github.com/settings/ssh/new to register new key'
 cat ~/.ssh/id_rsa.pub
