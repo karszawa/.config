@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # docker
-# .gitconfig
 
 declare failed_commands=""
 function trace {
@@ -17,6 +16,10 @@ declare step_counter=1
 function echo_step {
   echo -e "\033[34m\033[1mSTEP #$step_counter: $1\033[0m"
   let ++step_counter
+}
+
+function enter_to_continue {
+  read -p "PRESS ENTER TO CONTINUE:"
 }
 
 cd ~
@@ -37,6 +40,11 @@ trace ln -s ~/.config/.gitconfig ~/.gitconfig
 trace ln -s ~/.config/.gitattributes ~/.gitattributes
 trace ln -s ~/.config/.gitignore-global ~/.gitignore-global
 
+trace ssh-keygen -t rsa -b 4096 -C "siqvare@gmail.com"
+echo 'Visit https://github.com/settings/ssh/new to register new key'
+cat ~/.ssh/id_rsa.pub
+enter_to_continue
+
 echo_step 'pry'
 
 trace ln -s ~/.config/pry/.pryrc ~/.pryrc
@@ -50,9 +58,10 @@ trace fisher
 
 echo_step 'vim'
 
-trace ln -s .vim/ ../.vim
+trace rm ~/.vim
+trace ln -s ~/.config/.vim/ ~/.vim
 
-trace mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+trace mkdir -p ~/.vim/autoload ~/.vim/bundle 
 trace curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 trace git clone --depth=1 https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
@@ -72,9 +81,15 @@ trace curl https://sdk.cloud.google.com | bash --install-dir=~/.google
 trace chsh -s /usr/local/bin/fish
 chsh -s /bin/zsh
 
+echo_step 'hushlogin'
+
+trace touch ~/.hushlogin
+
 echo_step 'iTerm2'
 
 echo 'Open iTerm2 and check "Load preferences from a custom folder or URL" then fill text box with "~/.config/iterm2"'
+
+enter_to_continue
 
 if [ failed_commands == "" ]; then
   echo 'DONE'

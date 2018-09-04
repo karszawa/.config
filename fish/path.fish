@@ -16,4 +16,4 @@ for path in $paths
   end
 end
 
-source '~/.google/google-cloud-sdk/path.fish.inc'
+source "$HOME/.google/google-cloud-sdk/path.fish.inc"
