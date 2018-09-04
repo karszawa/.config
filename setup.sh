@@ -70,6 +70,7 @@ echo_step 'google-cloud-sdk'
 trace curl https://sdk.cloud.google.com | bash --install-dir=~/.google
 
 trace chsh -s /usr/local/bin/fish
+chsh -s /bin/zsh
 
 echo_step 'iTerm2'
 
