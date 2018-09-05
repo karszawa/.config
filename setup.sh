@@ -52,7 +52,7 @@ trace brew bundle install --file=~/.config/Brewfile
 echo_step 'pry'
 
 trace ln -s ~/.config/pry/.pryrc ~/.pryrc
-trace cat ~/.config/pry/gems.list | xargs -L1 code --install-extension
+trace cat ~/.config/pry/gems.list | xargs -L1 gem install
 
 echo_step 'fish'
 
@@ -79,7 +79,7 @@ trace ln -s ~/.config/.vscode/keybindings.json ~/Library/Application\ Support/Co
 trace rm ~/Library/Application\ Support/Code/User/locale.json
 trace ln -s ~/.config/.vscode/locale.json ~/Library/Application\ Support/Code/User/locale.json
 
-trace cat ~/.config/.vscode/extensions.list | xargs -L1  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code--install-extension
+trace cat ~/.config/.vscode/extensions.list | xargs -L1  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension
 
 echo_step 'google-cloud-sdk'
 
