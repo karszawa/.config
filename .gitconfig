@@ -6,7 +6,7 @@
 	ui = auto
 [core]
 	editor = emacs
-	excludesfile = ~/.gitignore-global
+	excludesfile = /Users/karszawa/.gitignore_global
 	attributesfile = ~/.gitattributes-global
 [push]
 	default = current
@@ -18,7 +18,7 @@
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [diff]
 	compactionHeuristic = true
@@ -39,3 +39,5 @@
 	driver = mergepbx %O %A %B
 [ghq]
 	root = ~/dev/src
+[merge]
+	tool = code

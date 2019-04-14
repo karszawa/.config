@@ -10,7 +10,7 @@ function fish_prompt
 
 		echo ""
 
-		set_color white; echo -n '$ '
+		set_color white; echo -n '⚡ '
 end
 
 function fish_right_prompt
