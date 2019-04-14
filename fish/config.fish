@@ -14,4 +14,8 @@ if which lesspipe.sh > /dev/null
   export LESSOPEN='| /usr/bin/env lesspipe.sh %s 2>&-'
 end
 
-set -U EDITOR vim
+set -x NDENV_ROOT $HOME/.anyenv/envs/ndenv
+set -x PATH $HOME/.anyenv/envs/ndenv/bin $PATH
+set -x PATH $NDENV_ROOT/shims $PATH
+
+set -U EDITOR emacs

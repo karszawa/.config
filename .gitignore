@@ -29,12 +29,14 @@ Temporary Items
 
 *
 !fish
+!.hyper.js
 !.vim
 !.vscode
 !.gitattributes
 !.gitconfig
 !.gitignore
 !.gitignore-global
+!.emacs.d
 !pry
 !iterm2
 !Brewfile

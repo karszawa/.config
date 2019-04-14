@@ -9,5 +9,13 @@
     "key": "ctrl+space",
     "command": "-editor.action.triggerSuggest",
     "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "shift+cmd+.",
+    "command": "-breadcrumbs.focusAndSelect"
+  },
+  {
+    "key": "cmd+[Quote]",
+    "command": "-breadcrumbs.focus"
   }
 ]
