@@ -42,4 +42,7 @@
     "gitlens.codeLens.enabled": false,
     "files.autoSaveDelay": 500,
     "git.autofetch": true,
+
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": ["--enable=errcheck"]
 }
