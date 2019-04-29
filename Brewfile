@@ -24,6 +24,7 @@ brew 'tree'
 brew 'w3m'
 brew 'wget'
 brew 'yarn'
+brew 'lesspipe'
 
 cask 'coteditor'
 cask 'google-chrome'
