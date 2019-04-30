@@ -49,5 +49,11 @@
   "prettier.eslintIntegration": true,
   "eslint.autoFixOnSave": true,
   "eslint.run": "onSave",
-  "C_Cpp.updateChannel": "Insiders"
+  "C_Cpp.updateChannel": "Insiders",
+    "gitlens.codeLens.enabled": false,
+    "files.autoSaveDelay": 500,
+    "git.autofetch": true,
+
+    "go.lintTool": "golangci-lint",
+    "go.lintFlags": ["--enable=errcheck"]
 }
