@@ -1,44 +1,55 @@
 {
-    "editor.find.autoFindInSelection": true,
-    "editor.fontSize": 13,
-    "editor.renderIndentGuides": false,
-    "editor.rulers": [ 80 ],
-    "editor.scrollBeyondLastLine": false,
-    "editor.tabSize": 2,
-    "editor.wordWrap": "on",
-    "explorer.autoReveal": false,
-    "explorer.confirmDelete": false,
-    "files.autoSave": "afterDelay",
-    "files.insertFinalNewline": true,
-    "git.ignoreLimitWarning": true,
-    "search.location": "panel",
-    "team.showWelcomeMessage": false,
-    "workbench.activityBar.visible": true,
-    "workbench.colorTheme": "Atom One Dark",
-    "workbench.startupEditor": "newUntitledFile",
+  "editor.find.autoFindInSelection": true,
+  "editor.fontSize": 13,
+  "editor.renderIndentGuides": false,
+  "editor.rulers": [80],
+  "editor.scrollBeyondLastLine": false,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "explorer.autoReveal": false,
+  "explorer.confirmDelete": false,
+  "files.autoSave": "afterDelay",
+  "files.insertFinalNewline": true,
+  "git.ignoreLimitWarning": true,
+  "search.location": "panel",
+  "workbench.activityBar.visible": true,
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.startupEditor": "newUntitledFile",
 
-    "rust.rustup": {
-        "toolchain": "nightly-x86_64-apple-darwin",
-        "nightlyToolchain": "nightly-x86_64-apple-darwin"
-    },
-    "rust.mode": "rls",
-    "rust.rls": {
-        "useRustfmt": true
-    },
+  "rust.rustup": {
+    "toolchain": "nightly-x86_64-apple-darwin",
+    "nightlyToolchain": "nightly-x86_64-apple-darwin"
+  },
+  "rust.mode": "rls",
+  "rust.rls": {
+    "useRustfmt": true
+  },
 
-    "eslint.packageManager": "yarn",
+  "eslint.packageManager": "yarn",
 
-    "window.zoomLevel": 0,
-    "workbench.statusBar.feedback.visible": false,
-    "ActiveFileInStatusBar.fullpath": false,
-    "breadcrumbs.enabled": false,
+  "window.zoomLevel": 0,
+  "workbench.statusBar.feedback.visible": false,
+  "ActiveFileInStatusBar.fullpath": false,
+  "breadcrumbs.enabled": false,
 
-    "[javascript]": {
-        "editor.formatOnSave": true
-    },
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
 
-    "tslint.autoFixOnSave": true,
+  "gitlens.codeLens.enabled": false,
+  "files.autoSaveDelay": 500,
+  "git.autofetch": true,
+  "editor.formatOnSave": true,
 
+  "[cpp]": {
+    "editor.wordBasedSuggestions": false,
+    "editor.formatOnSave": false
+  },
+  "sync.gist": "3b3e44582a7703adcbf870e8d1325c37",
+  "prettier.eslintIntegration": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.run": "onSave",
+  "C_Cpp.updateChannel": "Insiders",
     "gitlens.codeLens.enabled": false,
     "files.autoSaveDelay": 500,
     "git.autofetch": true,
