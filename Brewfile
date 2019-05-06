@@ -28,7 +28,7 @@ brew 'lesspipe'
 
 cask 'coteditor'
 cask 'google-chrome'
-cask 'iterm2'
+cask 'hyper'
 cask 'sketch'
 cask 'slack'
 cask 'sourcetree'
@@ -36,8 +36,6 @@ cask 'spark'
 cask 'visual-studio-code'
 cask '1password'
 cask 'trailer'
-cask 'inkdrop'
 cask 'docker'
 cask 'docker-toolbox'
-
-mas 'Spark', id: 1176895641
+cask 'alfred'
