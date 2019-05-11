@@ -27,19 +27,7 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-*
-!fish
-!.hyper.js
-!.vim
-!.vscode
-!.gitattributes
-!.gitconfig
-!.gitignore
-!.gitignore-global
-!.emacs.d
-!pry
-!iterm2
-!Brewfile
-!README.md
-!setup.sh
-!Alfred.alfredpreferences
+hub # because of oauth token
+fisherman
+yarn
+gcloud
