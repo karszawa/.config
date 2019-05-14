@@ -11,7 +11,8 @@ set paths \
   '/usr/local/share/git-core/contrib/diff-highlight' \
   '/Applications/Visual Studio Code.app/Contents/Resources/app/bin' \
   '/usr/local/opt/php@7.1/bin' \
-  $HOME/.anyenv/bin
+  $HOME/.anyenv/bin \
+	$HOME/.nodebrew/current/bin
 
 for path in $paths
   if not [ -f $path ]
