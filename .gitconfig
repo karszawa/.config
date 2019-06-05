@@ -1,7 +1,7 @@
 [core]
 [user]
 	name = Hiroaki KARASAWA
-	email = siqvare@gmail.com
+	email = $GIT_EMAIL
 [color]
 	ui = auto
 [core]
