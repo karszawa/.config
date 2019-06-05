@@ -8,7 +8,7 @@
   "editor.wordWrap": "on",
   "explorer.autoReveal": false,
   "explorer.confirmDelete": false,
-  "files.autoSave": "afterDelay",
+  "files.autoSave": "onFocusChange",
   "files.insertFinalNewline": true,
   "git.ignoreLimitWarning": true,
   "search.location": "panel",
