@@ -1,7 +1,7 @@
 [core]
 [user]
 	name = Hiroaki KARASAWA
-	email = karszawa@mercari.com
+	email = karszawa@gmail.com
 [color]
 	ui = auto
 [core]
@@ -41,3 +41,5 @@
 	root = ~/dev/src
 [merge]
 	tool = code
+[include]
+	path = ./.gitconfig-local

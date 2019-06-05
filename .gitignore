@@ -31,3 +31,4 @@ hub # because of oauth token
 fisherman
 yarn
 gcloud
+.gitconfig-local
