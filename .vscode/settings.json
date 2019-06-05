@@ -55,5 +55,9 @@
     "git.autofetch": true,
 
     "go.lintTool": "golangci-lint",
-    "go.lintFlags": ["--enable=errcheck"]
+    "go.lintFlags": [
+      "--enable=errcheck"
+    ],
+    "team.showWelcomeMessage": false,
+    "eslint.enable": false
 }
