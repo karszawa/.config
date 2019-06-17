@@ -37,5 +37,15 @@
     "key": "shift+alt+left",
     "command": "-cursorWordStartLeftSelect",
     "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+v",
+    "command": "cursorPageDown",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "pagedown",
+    "command": "-cursorPageDown",
+    "when": "textInputFocus"
   }
 ]

@@ -1,7 +1,6 @@
 [core]
 [user]
 	name = Hiroaki KARASAWA
-	email = siqvare@gmail.com
 [color]
 	ui = auto
 [core]
@@ -41,3 +40,5 @@
 	root = ~/dev/src
 [merge]
 	tool = code
+[include]
+	path = ~/.config/.gitconfig-local

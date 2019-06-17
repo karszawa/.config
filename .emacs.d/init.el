@@ -3,6 +3,12 @@
 ;; 上部メニューバーを非表示
 (menu-bar-mode -1)
 
+; stop creating backup~ files
+(setq make-backup-files nil)
+
+; stop creating #autosave# files
+(setq auto-save-default nil)
+
 ;; ツールバーを非表示
 (if (eq window-system 'ns)
     (tool-bar-mode -1))
@@ -24,4 +30,3 @@
 
 ;; 対応するカッコをハイライト
 (show-paren-mode t)
-
