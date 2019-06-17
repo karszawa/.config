@@ -33,3 +33,5 @@ yarn
 gcloud
 .gitconfig-local
 hub
+
+configstore
