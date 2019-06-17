@@ -43,11 +43,15 @@ echo 'Visit https://github.com/settings/ssh/new to register new key'
 cat ~/.ssh/id_rsa.pub
 enter_to_continue
 
+# sudoでTouchIDが使えるようにする ( https://qiita.com/kawaz/items/0593163c1c5538a34f6f )
+curl -sL https://gist.github.com/kawaz/d95fb3b547351e01f0f3f99783180b9f/raw/install-pam_tid-and-pam_reattach.sh | bash
+
 echo_step 'brewfile'
 
 trace hub clone --depth=1 https://github.com/karszawa/.config
-
 trace brew bundle install --file=~/.config/Brewfile
+brew install mas
+mas install 803453959
 
 echo_step 'pry'
 
@@ -56,8 +60,7 @@ trace cat ~/.config/pry/gems.list | xargs -L1 gem install
 
 echo_step 'fish'
 
-trace curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
-
+curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 trace fisher
 
 echo_step 'vim'

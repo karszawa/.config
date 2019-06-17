@@ -27,7 +27,8 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-hub # because of oauth token
+# because of oauth token
+hub
 fisherman
 yarn
 gcloud
