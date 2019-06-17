@@ -27,12 +27,19 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# because of oauth token
-hub
-fisherman
-yarn
-gcloud
-.gitconfig-local
+# Because of oauth token
 hub
 
+# Copy of fish/fisherfile
+fisherman
+
+yarn
+gcloud
+
+# User name
+.gitconfig-local
+
 configstore
+
+# Ignore backup files
+*~ 

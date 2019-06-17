@@ -18,7 +18,6 @@ $ bash -s export.sh
   - `ctrl+@` で親ディレクトリ
   - `ctrl+,` で戻るとか
 - anyenv化
-- fish_variables いい感じ
 - https://rcmdnk.com/blog/2015/03/22/computer-mac/
   - defaults write -g InitialKeyRepeat -int 12
 - ログインシェル変更
