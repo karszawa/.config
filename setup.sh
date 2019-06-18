@@ -67,6 +67,11 @@ echo_step 'fish'
 trace curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 trace fisher
 
+echo_step 'anyenv'
+
+trace anyenv install --init
+trace anyenv install nodenv
+
 echo_step 'vim'
 
 trace rm ~/.vim
