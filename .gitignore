@@ -48,4 +48,5 @@ anyenv
 # Ignore backup files
 *~
 
-# fish/fish_variables
+# local
+fish/fish_variables
