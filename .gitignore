@@ -39,7 +39,13 @@ gcloud
 # User name
 .gitconfig-local
 
+# notifiers
 configstore
 
+# binaries
+anyenv
+
 # Ignore backup files
-*~ 
+*~
+
+# fish/fish_variables
