@@ -17,9 +17,8 @@ $ bash -s export.sh
 - ディレクトリ移動系のキーバインドを足す
   - `ctrl+@` で親ディレクトリ
   - `ctrl+,` で戻るとか
-- anyenv化
+- anyenv 化
+  - インストールはできたけど source (anyenv init -)がバグる
 - https://rcmdnk.com/blog/2015/03/22/computer-mac/
   - defaults write -g InitialKeyRepeat -int 12
-- ログインシェル変更
-- sudo xcodebuild -license
-- google-cloud-sdk
+- gitignore fish/fish_variables
