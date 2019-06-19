@@ -1,6 +1,7 @@
+oh-my-fish/plugin-argu
 edc/bass
 evanlucas/fish-kubectl-completions
-er0/lolfish
+oh-my-fish/plugin-extract
 karszawa/peco_change_directory
 karszawa/peco_select_history
 fisherman/rbenv

@@ -24,6 +24,10 @@ function enter_to_continue {
 
 cd ~
 
+echo_step 'xcodebuild'
+
+trace sudo xcodebuild -license
+
 echo_step 'homebrew'
 
 trace /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -36,36 +40,44 @@ trace ln -s ~/.config/.gitconfig ~/.gitconfig
 trace ln -s ~/.config/.gitattributes ~/.gitattributes
 trace ln -s ~/.config/.gitignore-global ~/.gitignore-global
 
-echo -e "Host *\n  UseKeychain yes\n  AddKeysToAgent yes\n  IdentityFile ~/.ssh/id_rsa" >> ~/.ssh/config
+cat ~/config/defaults/ssh_config >> ~/.ssh/config
 
 trace ssh-keygen -t rsa -b 4096 -C "siqvare@gmail.com"
 echo 'Visit https://github.com/settings/ssh/new to register new key'
 cat ~/.ssh/id_rsa.pub
 enter_to_continue
 
+# sudoでTouchIDが使えるようにする ( https://qiita.com/kawaz/items/0593163c1c5538a34f6f )
+curl -sL https://gist.github.com/kawaz/d95fb3b547351e01f0f3f99783180b9f/raw/install-pam_tid-and-pam_reattach.sh | bash
+
 echo_step 'brewfile'
 
 trace hub clone --depth=1 https://github.com/karszawa/.config
-
+trace brew install mas
 trace brew bundle install --file=~/.config/Brewfile
+trace mas install 803453959
 
-echo_step 'pry'
+echo_step 'change shell to fish'
 
-trace ln -s ~/.config/pry/.pryrc ~/.pryrc
-trace cat ~/.config/pry/gems.list | xargs -L1 gem install
+trace echo /usr/local/bin/fish >> /etc/shells
+trace chsh -s /usr/local/bin/fish
 
 echo_step 'fish'
 
-trace curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
-
+trace curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 trace fisher
+
+echo_step 'anyenv'
+
+trace anyenv install --init
+trace anyenv install nodenv
 
 echo_step 'vim'
 
 trace rm ~/.vim
 trace ln -s ~/.config/.vim/ ~/.vim
 
-trace mkdir -p ~/.vim/autoload ~/.vim/bundle 
+trace mkdir -p ~/.vim/autoload ~/.vim/bundle
 trace curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
 trace git clone --depth=1 https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
@@ -92,9 +104,20 @@ echo_step 'hushlogin'
 
 trace touch ~/.hushlogin
 
+echo_step 'pry'
+
+trace ln -s ~/.config/pry/.pryrc ~/.pryrc
+trace cat ~/.config/pry/gems.list | xargs -L1 gem install
+
+echo_step 'Alfread'
+
+echo 'Open Alfread prefereces and Open Advanced > Set preferences folder then set target folder to ~/.config'
+
+enter_to_continue
+
 echo_step 'iTerm2'
 
-echo 'Open iTerm2 and check "Load preferences from a custom folder or URL" then fill text box with "~/.config/iterm2"'
+echo 'Open iTerm2 and check "Load preferences from a custom folder or URL" then fill text box with "~/.config"'
 
 enter_to_continue
 

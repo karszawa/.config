@@ -1,27 +1,16 @@
 if [ -f '~/dev' ]
-  mkdir '~/dev'
+    mkdir '~/dev'
 end
 
-set -gx GOPATH ~/dev
-set -gx ANYENV_ROOT "$HOME/.anyenv"
+set -x GOPATH ~/dev
+set -x ANYENV_ROOT $HOME/.anyenv
 
-set paths \
-  $GOPATH/bin \
-  ~/.cargo/bin \
-  '/usr/local/share/git-core/contrib/diff-highlight' \
-  '/Applications/Visual Studio Code.app/Contents/Resources/app/bin' \
-  '/usr/local/opt/php@7.1/bin' \
-  $HOME/.anyenv/bin \
-	$HOME/.nodebrew/current/bin
+set -x PATH $GOPATH/bin $PATH
+set -x PATH $HOME/.cargo/bin $PATH
+set -x PATH '/usr/local/share/git-core/contrib/diff-highlight' $PATH
 
-for path in $paths
-  if not [ -f $path ]
-    set -gx fish_user_paths $path $fish_user_paths
-  end
+set GOOGLE_CLOUD_SDK_PATH_INC /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc
+
+if [ -f $GOOGLE_CLOUD_SDK_PATH_INC ]
+    source $GOOGLE_CLOUD_SDK_PATH_INC
 end
-
-set -x NDENV_ROOT $HOME/.anyenv/envs/ndenv
-set -x PATH $HOME/.anyenv/envs/ndenv/bin $PATH
-set -x PATH $NDENV_ROOT/shims $PATH
-
-source "$HOME/.google/google-cloud-sdk/path.fish.inc"
