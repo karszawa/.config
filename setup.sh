@@ -84,14 +84,8 @@ trace git clone --depth=1 https://github.com/vim-airline/vim-airline ~/.vim/bund
 
 echo_step 'Visual Studio Code'
 
-trace rm ~/Library/Application\ Support/Code/User/settings.json
-trace ln -s ~/.config/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-trace rm ~/Library/Application\ Support/Code/User/keybindings.json
-trace ln -s ~/.config/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
-trace rm ~/Library/Application\ Support/Code/User/locale.json
-trace ln -s ~/.config/.vscode/locale.json ~/Library/Application\ Support/Code/User/locale.json
-
-trace cat ~/.config/.vscode/extensions.list | xargs -L1  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension
+echo "Install Settings Sync via https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync"
+echo "and use this gist id 3b3e44582a7703adcbf870e8d1325c37"
 
 echo_step 'google-cloud-sdk'
 
