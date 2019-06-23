@@ -100,8 +100,8 @@ trace touch ~/.hushlogin
 
 echo_step 'pry'
 
-trace ln -s ~/.config/pry/.pryrc ~/.pryrc
-trace cat ~/.config/pry/gems.list | xargs -L1 gem install
+trace ln -s ~/.config/.pryrc ~/.pryrc
+trace cat ~/.config/gems.list | xargs -L1 gem install
 
 echo_step 'Alfread'
 
