@@ -73,7 +73,7 @@
 				<key>runningsubtext</key>
 				<string>...</string>
 				<key>script</key>
-				<string>result=$(/Users/karszawa/.anyenv/envs/ndenv/shims/translate -s ja -t en '{query}')
+				<string>result=$(translate -s ja -t en '{query}')
 
 cat &lt;&lt;EOS
 {"items": [
@@ -85,7 +85,7 @@ cat &lt;&lt;EOS
 EOS
 </string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
 				<string></string>
 				<key>subtext</key>
