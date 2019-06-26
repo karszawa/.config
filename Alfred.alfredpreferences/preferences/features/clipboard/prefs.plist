@@ -11,6 +11,8 @@
 		<key>string</key>
 		<string>V</string>
 	</dict>
+	<key>snippetKeyword</key>
+	<string>sp</string>
 	<key>snippetsAtTop</key>
 	<false/>
 	<key>viewerKeyword</key>
