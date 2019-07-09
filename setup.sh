@@ -36,10 +36,6 @@ echo_step 'git'
 
 brew install hub
 
-trace ln -s ~/.config/.gitconfig ~/.gitconfig
-trace ln -s ~/.config/.gitattributes ~/.gitattributes
-trace ln -s ~/.config/.gitignore-global ~/.gitignore-global
-
 cat ~/config/defaults/ssh_config >> ~/.ssh/config
 
 trace ssh-keygen -t rsa -b 4096 -C "siqvare@gmail.com"
@@ -47,12 +43,26 @@ echo 'Visit https://github.com/settings/ssh/new to register new key'
 cat ~/.ssh/id_rsa.pub
 enter_to_continue
 
-# sudoでTouchIDが使えるようにする ( https://qiita.com/kawaz/items/0593163c1c5538a34f6f )
+echo_step 'clone .config'
+
+trace hub clone --depth=1 https://github.com/karszawa/.config
+
+echo_step 'link'
+
+trace ln -sf ~/.config/.bash_profile ~/.bash_profile
+trace ln -sf ~/.config/.gitconfig ~/.gitconfig
+trace ln -sf ~/.config/.gitattributes ~/.gitattributes
+trace ln -sf ~/.config/.gitignore-global ~/.gitignore-global
+trace ln -sf ~/.config/.vim/ ~/.vim
+trace ln -sf ~/.config/.pryrc ~/.pryrc
+
+echo_step 'Touch ID'
+
+# sudoでTouchIDが使えるようにする → https://qiita.com/kawaz/items/0593163c1c5538a34f6f
 curl -sL https://gist.github.com/kawaz/d95fb3b547351e01f0f3f99783180b9f/raw/install-pam_tid-and-pam_reattach.sh | bash
 
 echo_step 'brewfile'
 
-trace hub clone --depth=1 https://github.com/karszawa/.config
 trace brew install mas
 trace brew bundle install --file=~/.config/Brewfile
 trace mas install 803453959
@@ -74,31 +84,9 @@ trace anyenv install nodenv
 
 echo_step 'vim'
 
-trace rm ~/.vim
-trace ln -s ~/.config/.vim/ ~/.vim
-
 trace mkdir -p ~/.vim/autoload ~/.vim/bundle
 trace curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-
 trace git clone --depth=1 https://github.com/vim-airline/vim-airline ~/.vim/bundle/vim-airline
-
-echo_step 'Visual Studio Code'
-
-trace rm ~/Library/Application\ Support/Code/User/settings.json
-trace ln -s ~/.config/.vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
-trace rm ~/Library/Application\ Support/Code/User/keybindings.json
-trace ln -s ~/.config/.vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
-trace rm ~/Library/Application\ Support/Code/User/locale.json
-trace ln -s ~/.config/.vscode/locale.json ~/Library/Application\ Support/Code/User/locale.json
-
-trace cat ~/.config/.vscode/extensions.list | xargs -L1  /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code --install-extension
-
-echo_step 'google-cloud-sdk'
-
-trace curl https://sdk.cloud.google.com | bash --install-dir=~/.google
-
-trace chsh -s /usr/local/bin/fish
-chsh -s /bin/zsh
 
 echo_step 'hushlogin'
 
@@ -106,8 +94,16 @@ trace touch ~/.hushlogin
 
 echo_step 'pry'
 
-trace ln -s ~/.config/pry/.pryrc ~/.pryrc
-trace cat ~/.config/pry/gems.list | xargs -L1 gem install
+trace cat ~/.config/gems.list | xargs -L1 gem install
+
+echo_step 'google-cloud-sdk'
+
+trace curl https://sdk.cloud.google.com | bash --install-dir=~/.google
+
+echo_step 'Visual Studio Code'
+
+echo "Install Settings Sync via https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync"
+echo "and use this gist id 3b3e44582a7703adcbf870e8d1325c37"
 
 echo_step 'Alfread'
 

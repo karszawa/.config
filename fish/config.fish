@@ -20,9 +20,9 @@ end
 
 anyenv init - fish | source
 
-# if status --is-interactive
-#     source (nodenv init -|psub)
-# end
+if status --is-interactive
+    source (nodenv init -|psub)
+end
 
 # Doesn't exist
 # source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.fish.inc

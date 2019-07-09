@@ -1,8 +1,9 @@
-oh-my-fish/plugin-argu
+0rax/fish-bd
 edc/bass
 evanlucas/fish-kubectl-completions
-oh-my-fish/plugin-extract
-karszawa/peco_change_directory
-karszawa/peco_select_history
 fisherman/rbenv
 fisherman/z
+karszawa/peco_change_directory
+karszawa/peco_select_history
+oh-my-fish/plugin-argu
+oh-my-fish/plugin-extract
