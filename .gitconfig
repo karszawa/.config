@@ -31,6 +31,8 @@
 	co = checkout
 	open = browse
 	pr = pull-request
+	cm = commit
+	cp = cherry-pick
 [commit]
 	template = ~/.stCommitMsg
 [merge "mergepbx"]
