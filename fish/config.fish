@@ -6,6 +6,7 @@ source ~/.config/fish/keybindings.fish
 set -x Z_DATA $HOME/.local/share/z/data
 set -x Z_DATA_DIR $HOME/.local/share/z
 set -x Z_EXCLUDE $HOME
+set -x GPG_TTY (tty)
 
 # export GPG_TTY=(tty)
 set -x GO111MODULE on
