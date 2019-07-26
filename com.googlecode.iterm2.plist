@@ -14,6 +14,8 @@
 	<string>manual</string>
 	<key>BadgeRightMargin</key>
 	<integer>10</integer>
+	<key>CGFontRenderingFontSmoothingDisabled</key>
+	<false/>
 	<key>CheckTestRelease</key>
 	<true/>
 	<key>CompactMinimalTabBarHeight</key>
@@ -230,7 +232,9 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>268 231 796 486 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1680 17 1080 1920 1680 17 1080 1897 </string>
+	<string>0 0 1680 1050 0 0 1680 1027 </string>
+	<key>NSWindow Frame iTerm Window 1</key>
+	<string>10 296 650 467 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -855,7 +859,7 @@
 			<key>ASCII Anti Aliased</key>
 			<true/>
 			<key>Ambiguous Double Width</key>
-			<true/>
+			<false/>
 			<key>Ansi 0 Color</key>
 			<dict>
 				<key>Blue Component</key>
@@ -1069,6 +1073,8 @@
 			<key>Description</key>
 			<string>Default</string>
 			<key>Disable Window Resizing</key>
+			<true/>
+			<key>Draw Powerline Glyphs</key>
 			<true/>
 			<key>Flashing Bell</key>
 			<false/>
@@ -1501,15 +1507,15 @@
 	<key>NoSyncAllAppVersions</key>
 	<array>
 		<string>3.2.9</string>
-		<string>3.3.0beta12</string>
 		<string>3.3.0beta13</string>
+		<string>3.3.0beta12</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{1680, 17}, {1080, 1920}}</string>
+		<string>{{0, 0}, {1680, 1050}}</string>
 		<key>topLeft</key>
-		<string>{1710, 1533}</string>
+		<string>{268, 748}</string>
 	</dict>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
@@ -1518,7 +1524,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>558325766.98327899</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>9</integer>
+	<integer>10</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>582706076.47050202</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -2193,6 +2199,10 @@
 	</dict>
 	<key>NoSyncSearchHistory</key>
 	<array>
+		<string>kuroneko/change_place/call</string>
+		<string>kuronekochan</string>
+		<string>kuroneko/a</string>
+		<string>deviceId</string>
 		<string>isBrow</string>
 	</array>
 	<key>NoSyncSuppressMissingProfileInArrangementWarning</key>
@@ -2265,7 +2275,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-07-10T15:16:53Z</date>
+	<date>2019-07-19T03:35:04Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateRelaunchingMarker</key>
@@ -2304,6 +2314,8 @@
 	<false/>
 	<key>WordCharacters</key>
 	<string>/-+\~_.[]</string>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>iTerm Version</key>
 	<string>3.3.0beta13</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>

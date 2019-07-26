@@ -34,7 +34,8 @@
 	cm = commit
 	cp = cherry-pick
 [commit]
-	template = ~/.stCommitMsg
+	template = ~/.config/.git_commit_message
+	# gpgsign = true
 [merge "mergepbx"]
 	name = Xcode project files merger
 	driver = mergepbx %O %A %B
@@ -42,5 +43,8 @@
 	root = ~/dev/src
 [merge]
 	tool = code
+	conflictstyle = diff3
 [include]
 	path = ~/.config/.gitconfig-local
+[gpg]
+	program = gpg
