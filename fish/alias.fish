@@ -26,3 +26,4 @@ alias less='less -R'
 alias t='tig'
 alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
 alias peco='peco --initial-filter=Fuzzy'
+alias scripts=list-scripts

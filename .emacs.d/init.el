@@ -31,7 +31,9 @@
 
   ;; 対応するカッコをハイライト
   (show-paren-mode t)
+
+  ;; タブ幅を2に
+  (setq default-tab-width 2)
 )
 
 (add-hook 'terminal-init-xterm-hook #'startup_func)
-

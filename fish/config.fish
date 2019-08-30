@@ -27,3 +27,23 @@ end
 
 # Doesn't exist
 # source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.fish.inc
+
+function gco
+  git branch -a --sort=-authordate |
+    grep -v -e '->' -e '*' |
+    perl -pe 's/^\h+//g' |
+    perl -pe 's#^remotes/origin/###' |
+    perl -nle 'print if !$c{$_}++' |
+    peco |
+    xargs git checkout
+end
+
+function gme
+  git branch -a --sort=-authordate |
+    grep -v -e '->' -e '*' |
+    perl -pe 's/^\h+//g' |
+    perl -pe 's#^remotes/origin/###' |
+    perl -nle 'print if !$c{$_}++' |
+    peco |
+    xargs git merge
+end
