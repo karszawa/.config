@@ -7,6 +7,7 @@ function trace {
   echo -e "\033[1m$@\033[0m" >&2
 
   if "$@"; then
+    :
   else
     failed_commands+="$@\n"
   fi
