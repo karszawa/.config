@@ -50,3 +50,5 @@ anyenv
 
 # local
 fish/fish_variables
+
+direnv
