@@ -47,3 +47,5 @@ function gme
     peco |
     xargs git merge
 end
+
+direnv hook fish | source
