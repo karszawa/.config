@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AboutToPasteTabsWithCancel</key>
+	<true/>
+	<key>AboutToPasteTabsWithCancel_selection</key>
+	<integer>0</integer>
 	<key>AdjustWindowForFontSizeChange</key>
 	<true/>
 	<key>AppleAntiAliasingThreshold</key>
@@ -1611,16 +1615,15 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.3beta2</string>
-		<string>3.3.7beta4</string>
-		<string>3.3.7beta3</string>
-		<string>3.3.4beta1</string>
-		<string>3.3.7beta2</string>
-		<string>3.3.5beta2</string>
-		<string>3.3.8beta3</string>
-		<string>3.3.8beta2</string>
-		<string>3.3.2</string>
-		<string>3.3.8beta1</string>
+		<string>3.3.3beta1</string>
+		<string>3.3.0beta14</string>
+		<string>3.3.0beta16</string>
+		<string>3.3.0beta13</string>
+		<string>3.3.2beta2</string>
+		<string>3.3.2beta1</string>
+		<string>3.3.0beta15</string>
+		<string>3.2.9</string>
+		<string>3.3.0beta12</string>
 	</array>
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
@@ -1634,7 +1637,7 @@
 	<key>NoSyncInstallationId</key>
 	<string>447A7914-83A3-466A-84A7-DB63E81F873A</string>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>26</integer>
+	<integer>25</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>589877700.19082797</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -2347,8 +2350,68 @@
 			</dict>
 		</array>
 	</dict>
+<<<<<<< HEAD
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>589181131.82468998</real>
+||||||| b9af84e
+	<key>NoSyncSearchHistory</key>
+	<array>
+		<string>date</string>
+		<string>defaul</string>
+		<string>webroot</string>
+		<string>inspec</string>
+		<string>kuroneko/change_place/call</string>
+		<string>kuronekochan</string>
+		<string>kuroneko/a</string>
+		<string>deviceId</string>
+		<string>isBrow</string>
+	</array>
+	<key>NoSyncSuppressMissingProfileInArrangementWarning</key>
+	<true/>
+	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
+	<real>557646132.80513096</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+		<string>0000</string>
+		<string>0001</string>
+	</array>
+=======
+	<key>NoSyncSearchHistory</key>
+	<array>
+		<string>date</string>
+		<string>defaul</string>
+		<string>webroot</string>
+		<string>inspec</string>
+		<string>kuroneko/change_place/call</string>
+		<string>kuronekochan</string>
+		<string>kuroneko/a</string>
+		<string>deviceId</string>
+		<string>isBrow</string>
+	</array>
+	<key>NoSyncSearchHistory2</key>
+	<array>
+		<string>torbmake</string>
+		<string>trob</string>
+		<string>saga</string>
+		<string>visual-</string>
+		<string>brew</string>
+	</array>
+	<key>NoSyncSuppressMissingProfileInArrangementWarning</key>
+	<true/>
+	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
+	<real>557646132.80513096</real>
+	<key>NoSyncTipsDisabled</key>
+	<true/>
+	<key>NoSyncTipsToNotShow</key>
+	<array>
+		<string>000</string>
+		<string>0000</string>
+		<string>0001</string>
+	</array>
+>>>>>>> 76ed962d6a193d8ee542233b575b5194b00f7a58
 	<key>OnlyWhenMoreTabs</key>
 	<false/>
 	<key>OpenArrangementAtStartup</key>
@@ -2412,6 +2475,8 @@
 	<date>2019-12-22T21:28:41Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
+	<key>SUSkippedVersion</key>
+	<string>3.3.3beta2</string>
 	<key>SUUpdateRelaunchingMarker</key>
 	<false/>
 	<key>SavePasteHistory</key>

@@ -1,7 +1,7 @@
 [core]
 [user]
 	name = Hiroaki KARASAWA
-	email = karszawa@mercari.com
+	email = karszawa@users.noreply.github.com
 [color]
 	ui = auto
 [core]
@@ -45,7 +45,5 @@
 [merge]
 	tool = code
 	conflictstyle = diff3
-[include]
-	path = ~/.config/.gitconfig-local
 [gpg]
 	program = gpg
