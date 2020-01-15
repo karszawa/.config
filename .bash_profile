@@ -1,0 +1,2 @@
+eval "$(anyenv init - bash)"
+PATH=/usr/local/opt/python/libexec/bin:/Users/karszawa/.anyenv/envs/nodenv/shims:/Users/karszawa/.anyenv/envs/nodenv/shims:/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin:/Users/karszawa/bin:/usr/local/share/git-core/contrib/diff-highlight:/Users/karszawa/.cargo/bin:/Users/karszawa/dev/bin:/Users/karszawa/.rbenv/shims:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/karszawa/.anyenv/envs/nodenv/bin
