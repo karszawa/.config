@@ -1,0 +1,8 @@
+{
+  "alfredsnippet" : {
+    "snippet" : "Co-Authored-by: @{name} <{name}@users.noreply.github.com>\n",
+    "uid" : "5B8F5029-BCB4-403E-A448-A779A586D968",
+    "name" : "coauthoredby",
+    "keyword" : "coauthoredby"
+  }
+}
