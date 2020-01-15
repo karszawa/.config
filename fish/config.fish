@@ -47,3 +47,9 @@ function gme
     peco |
     xargs git merge
 end
+
+function u
+  git pull origin (git symbolic-ref --short HEAD)
+end
+
+direnv hook fish | source

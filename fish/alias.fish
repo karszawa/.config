@@ -27,3 +27,12 @@ alias t='tig'
 alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
 alias peco='peco --initial-filter=Fuzzy'
 alias scripts=list-scripts
+
+function nah
+  git reset --hard
+  git clean -df
+end
+
+function get_parent_branch
+  git show-branch | grep '*' | grep -v (git rev-parse --abbrev-ref HEAD) | head -1 | awk -F'[]~^[]' '{print $2}'
+end
