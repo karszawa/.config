@@ -34,6 +34,7 @@
 	pr = pull-request
 	cm = commit
 	cp = cherry-pick
+	update-current-branch = !git pull origin "$(git symbolic-ref --short HEAD)"
 [commit]
 	template = ~/.config/.git_commit_message
 	# gpgsign = true

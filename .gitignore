@@ -27,28 +27,29 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# Because of oauth token
-hub
+# ==================================================================================================
 
-# Copy of fish/fisherfile
-fisherman
-
+# Binaries
+anyenv
 yarn
 gcloud
-
-# User name
-.gitconfig-local
-
-# notifiers
-configstore
-
-# binaries
-anyenv
 
 # Ignore backup files
 *~
 
-# local
+# Local variables
 fish/fish_variables
+.gitconfig-local
+
+# Copy of remote
+fisher
 
 direnv
+
+# Secrets
+
+telepresence
+hub
+
+# ?
+configstore
