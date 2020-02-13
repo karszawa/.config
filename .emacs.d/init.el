@@ -1,4 +1,4 @@
-(defun startup_func()
+(defun startup()
   (define-key key-translation-map [?\C-h] [?\C-?])
 
   ;; 上部メニューバーを非表示
@@ -41,4 +41,4 @@
   (setq tab-always-indent nil)
 )
 
-(add-hook 'terminal-init-xterm-hook #'startup_func)
+(add-hook 'terminal-init-xterm-hook #'startup)

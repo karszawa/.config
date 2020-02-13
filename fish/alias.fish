@@ -14,7 +14,7 @@ alias gco=git_checkout_with_search
 alias gem=git_merge_with_search
 alias nah=git_nah
 alias u=git_sync_with_remote_head
-alias e='emacsclient -c -a ""'
+alias e=emacs # 'emacsclient -c -a ""'
 alias git='hub'
 alias clang++='clang++ -std=c++0x'
 alias c++='clang++'
