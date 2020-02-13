@@ -29,7 +29,7 @@ cd ~
 
 echo_step 'copy default files'
 
-trace cat ~/config/defaults/ssh_config >> ~/.ssh/config
+trace cat ~/.config/defaults/ssh_config >> ~/.ssh/config
 
 echo_step 'link'
 
