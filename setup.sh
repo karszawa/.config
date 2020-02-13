@@ -2,6 +2,8 @@
 
 set -o pipefail
 
+set
+
 if [ -t 1 ]; then
   CONFIG_PATH="$(pwd)"
 else
@@ -37,7 +39,7 @@ if [ ! -f ~/.ssh ]; then
   mkdir ~/.ssh
 fi
 
-trace cat ~/.config/defaults/ssh_config >> ~/.ssh/config
+trace cat $CONFIG_PATH/defaults/ssh_config >> ~/.ssh/config
 
 echo_step 'link'
 
@@ -58,7 +60,7 @@ trace /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/
 
 echo_step 'brewfile'
 
-trace brew bundle --file=~/.config/Brewfile
+trace brew bundle --file=$CONFIG_PATH/Brewfile
 
 if [ ! -t 1 ]; then
   echo_step 'clone .config'
