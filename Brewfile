@@ -1,9 +1,9 @@
 cask_args appdir: "/Applications"
 
-tap "caskroom/cask"
 tap "datawire/blackbird"
 tap "github/gh"
 tap "homebrew/bundle"
+tap "homebrew/cask-cask"
 tap "homebrew/cask-versions"
 tap "homebrew/cask"
 tap "homebrew/core"
