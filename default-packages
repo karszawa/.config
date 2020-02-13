@@ -1,6 +1,5 @@
 eslint
 expo-cli
-firebase-cli
 firebase-tools
 lerna
 list-scripts
@@ -9,6 +8,5 @@ now
 npm
 preact-cli
 prettier
-tsc
 typescript
 yarn
