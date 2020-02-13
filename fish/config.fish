@@ -15,20 +15,31 @@ source ~/.config/fish/prompt.fish
 source ~/.config/fish/alias.fish
 source ~/.config/fish/keybindings.fish
 
-if which lesspipe.sh >/dev/null
-  set -x LESSOPEN '| /usr/bin/env lesspipe.sh %s 2>&-'
-end
-
-anyenv init - fish | source
-
-if status --is-interactive
-  nodenv init - | source
-end
-
 if not functions -q fisher
   set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
   curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
   fish -c fisher
 end
 
-direnv hook fish | source
+if type -q lesspipe.sh
+  set -x LESSOPEN '| /usr/bin/env lesspipe.sh %s 2>&-'
+end
+
+if type -q anyenv
+  anyenv init - fish | source
+end
+
+if type -q nodenv
+  nodenv init - | source
+end
+
+if type -q direnv
+  direnv hook fish | source
+end
+
+if not [ -d (nodenv root)/plugins ]
+  echo "# There is no configuration about nodenv-default-packages. Setting up now:"
+  mkdir -p (nodenv root)/plugins
+  git clone https://github.com/nodenv/nodenv-default-packages.git (nodenv root)/plugins/nodenv-default-packages
+  echo "# Finished"
+end
