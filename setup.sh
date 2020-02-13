@@ -29,6 +29,10 @@ function enter_to_continue {
   read -p "PRESS ENTER TO CONTINUE:"
 }
 
+echo "Do you enable iCloud sync?"
+
+enter_to_continue
+
 cd ~
 
 echo_step 'copy default files'
