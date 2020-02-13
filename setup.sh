@@ -2,7 +2,11 @@
 
 set -o pipefail
 
-pwd
+if [ -t 1 ]; then
+  CONFIG_PATH="$(pwd)"
+else
+  CONFIG_PATH=$HOME/.config
+fi
 
 declare failed_commands=""
 function trace {
