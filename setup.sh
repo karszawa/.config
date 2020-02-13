@@ -2,9 +2,7 @@
 
 set -o pipefail
 
-set
-
-if [ -t 1 ]; then
+if [ -z "$CI" ] then
   CONFIG_PATH="$(pwd)"
 else
   CONFIG_PATH=$HOME/.config
@@ -62,7 +60,7 @@ echo_step 'brewfile'
 
 trace brew bundle --file=$CONFIG_PATH/Brewfile
 
-if [ ! -t 1 ]; then
+if [ -z "$CI" ]; then
   echo_step 'clone .config'
 
   trace git clone --depth=1 https://github.com/karszawa/.config
@@ -75,8 +73,8 @@ curl -sL https://gist.github.com/kawaz/d95fb3b547351e01f0f3f99783180b9f/raw/inst
 
 echo_step 'change shell to fish'
 
-trace echo /usr/local/bin/fish >> /etc/shells
-trace chsh -s /usr/local/bin/fish
+trace sudo echo /usr/local/bin/fish >> /etc/shells
+trace sudo chsh -s /usr/local/bin/fish
 
 echo_step 'Visual Studio Code'
 
