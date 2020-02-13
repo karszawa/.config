@@ -2,7 +2,7 @@
 
 set -o pipefail
 
-if [ -z "$CI" ] then
+if [ -z "$CI" ]; then
   CONFIG_PATH="$(pwd)"
 else
   CONFIG_PATH=$HOME/.config
