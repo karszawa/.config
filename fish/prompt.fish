@@ -1,5 +1,4 @@
 function fish_prompt
-  # set_color ff1744; echo -n (whoami)'@'(scutil --get ComputerName)' '
   set_color 00e676; echo -n (prompt_pwd)
 
   if git rev-parse 2> /dev/null
@@ -12,7 +11,6 @@ function fish_prompt
 end
 
 function fish_right_prompt
-  set_color 636363; echo (date +"%H:%M")
 end
 
 function fish_greeting

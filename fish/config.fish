@@ -1,55 +1,34 @@
-source ~/.config/fish/path.fish
-source ~/.config/fish/prompt.fish
-source ~/.config/fish/alias.fish
-source ~/.config/fish/keybindings.fish
-
 set -x Z_DATA $HOME/.local/share/z/data
 set -x Z_DATA_DIR $HOME/.local/share/z
 set -x Z_EXCLUDE $HOME
 set -x GPG_TTY (tty)
 
-# export GPG_TTY=(tty)
 set -x GO111MODULE on
 
-# https://qiita.com/delphinus/items/b04752bb5b64e6cc4ea9
 set -x LESS '-g -i -M -R -S -W -z-4 -x4'
 set -x PAGER less
 
+set XDG_CONFIG_HOME $HOME/.config
+
+source ~/.config/fish/path.fish
+source ~/.config/fish/prompt.fish
+source ~/.config/fish/alias.fish
+source ~/.config/fish/keybindings.fish
+
 if which lesspipe.sh >/dev/null
-    set -x LESSOPEN '| /usr/bin/env lesspipe.sh %s 2>&-'
+  set -x LESSOPEN '| /usr/bin/env lesspipe.sh %s 2>&-'
 end
 
 anyenv init - fish | source
 
 if status --is-interactive
-    source (nodenv init -|psub)
+  nodenv init - | source
 end
 
-# Doesn't exist
-# source /usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.fish.inc
-
-function gco
-  git branch -a --sort=-authordate |
-    grep -v -e '->' -e '*' |
-    perl -pe 's/^\h+//g' |
-    perl -pe 's#^remotes/origin/###' |
-    perl -nle 'print if !$c{$_}++' |
-    peco |
-    xargs git checkout
-end
-
-function gme
-  git branch -a --sort=-authordate |
-    grep -v -e '->' -e '*' |
-    perl -pe 's/^\h+//g' |
-    perl -pe 's#^remotes/origin/###' |
-    perl -nle 'print if !$c{$_}++' |
-    peco |
-    xargs git merge
-end
-
-function u
-  git pull origin (git symbolic-ref --short HEAD)
+if not functions -q fisher
+  set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
+  curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
+  fish -c fisher
 end
 
 direnv hook fish | source

@@ -10,9 +10,11 @@ alias cm='git commit'
 alias ca='git commit --amend'
 alias p='git push'
 alias bs='git branch | peco | pbcopy'
-alias emacs='emacsclient -c -a ""'
-alias e=emacs
-alias v='vim'
+alias gco=git_checkout_with_search
+alias gem=git_merge_with_search
+alias nah=git_nah
+alias u=git_sync_with_remote_head
+alias e='emacsclient -c -a ""'
 alias git='hub'
 alias clang++='clang++ -std=c++0x'
 alias c++='clang++'
@@ -25,14 +27,5 @@ alias skim='open -a /Applications/Skim.app'
 alias less='less -R'
 alias t='tig'
 alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
-alias peco='peco --initial-filter=Fuzzy'
 alias scripts=list-scripts
-
-function nah
-  git reset --hard
-  git clean -df
-end
-
-function get_parent_branch
-  git show-branch | grep '*' | grep -v (git rev-parse --abbrev-ref HEAD) | head -1 | awk -F'[]~^[]' '{print $2}'
-end
+alias k=kubectl
