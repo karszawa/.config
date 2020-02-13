@@ -29,7 +29,7 @@ cd ~
 
 echo_step 'copy default files'
 
-if [ ! -f ~/.ssh ]
+if [ ! -f ~/.ssh ]; then
   mkdir ~/.ssh
 fi
 
