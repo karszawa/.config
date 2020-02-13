@@ -1,0 +1,3 @@
+#!/bin/sh
+
+fd js lib | env SNAPSHOT="$(basename $(fd . lib/snapshots | fzf) .js)" entr -r -sc 'node ./lib/cli start'

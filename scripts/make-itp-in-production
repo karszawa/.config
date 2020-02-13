@@ -1,0 +1,16 @@
+#!/bin/sh
+
+export NODE_ENV="production"
+export SMARTPHONE_LISTING_GUIDE_URL="https://127.0.0.1/guide"
+export DISAGREE_CANCEL_REQUEST_URL="https://127.0.0.1/guide"
+export CREATE_CANCEL_REQUEST_URL="https://127.0.0.1/guide"
+export AUTO_REVIEW_INQUIRY_URL="https://127.0.0.1/guide"
+export API_URL="https://127.0.0.1/api"
+export HELP_CENTER_URL="https://127.0.0.1/dummy"
+export WEB_GUIDE_URL="https://127.0.0.1/dummy"
+export LARGE_ITEM_SHIPPING_ITP_URL="https://127.0.0.1/dummy"
+export OLD_ITP_URL="https://127.0.0.1/dummy"
+export CAMPAIGN_URL="https://127.0.0.1/dummy"
+export PUDO_LOCKER_MAP_URL="https://127.0.0.1/dummy"
+
+npm run build

@@ -1,0 +1,22 @@
+#!/bin/sh
+
+export DEBUG='express:*'
+# This should be the mock API.  Proxy this to the port that mercari-mock-api-itp is
+# serving on.
+export API_URL="https://${USER}-api-jp.mini.dev5s.com"
+export MOCK_NATIVE_APP_AUTH="1"
+unset MOCK_NATIVE_APP_BRIDGE
+# This guy doesn't exist in the chore/update-for-mini-env branch, but it is used
+# elsewhere.  For branches not containing those changes, also remember to
+# comment out the nativeBridge mock in Webpack config.
+export MOCK_NATIVE_APP_API="1"
+export ASSET_PATH="https://${USER}-frontend-jp.mini.dev5s.com/item-transactions/"
+export LARGE_ITEM_SHIPPING_ITP_URL="https://${USER}-frontend-jp.mini.dev5s.com/item-transactions.jp.yamato-kazai.html"
+export OLD_ITP_URL="https://${USER}-frontend-jp.mini.dev5s.com/item-transactions.jp.html"
+export SMARTPHONE_LISTING_GUIDE_URL="https://${USER}-frontend-jp.mini.dev5s.com/modal_smartphone_listing/index.html"
+export DISAGREE_CANCEL_REQUEST_URL="https://${USER}-frontend-jp.mini.dev5s.com/cancel_request/inquiry.html"
+export CREATE_CANCEL_REQUEST_URL="https://${USER}-frontend-jp.mini.dev5s.com/cancel_request/create_request.html"
+export AUTO_REVIEW_INQUIRY_URL="https://${USER}-frontend-jp.mini.dev5s.com/auto_rating/contact_for_review.html"
+export HELP_CENTER_URL="https://web-jp.fury-panda.dev5s.com/jp/help-center"
+
+"${@}"

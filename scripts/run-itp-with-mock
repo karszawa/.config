@@ -1,0 +1,3 @@
+#!/bin/sh
+
+with-mock-api-and-mini-env npm run start -- --https --pfx "$(docker exec mini3-proxy cat /etc/nginx/ssl/certificates/_.mini.dev5s.com.pem)"
