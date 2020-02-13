@@ -41,5 +41,6 @@ if not [ -d (nodenv root)/plugins ]
   echo "# There is no configuration about nodenv-default-packages. Setting up now:"
   mkdir -p (nodenv root)/plugins
   git clone https://github.com/nodenv/nodenv-default-packages.git (nodenv root)/plugins/nodenv-default-packages
+  ln -sf ~/.config/default-packages (nodenv root)/default-packages
   echo "# Finished"
 end
