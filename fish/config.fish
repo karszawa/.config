@@ -25,13 +25,19 @@ if type -q lesspipe.sh
   set -x LESSOPEN '| /usr/bin/env lesspipe.sh %s 2>&-'
 end
 
-if type -q anyenv
-  anyenv init - fish | source
+if not type -q anyenv
+  echo "# Could not find anyenv. Will setup:"
+  anyenv install --init
 end
 
-if type -q nodenv
-  nodenv init - | source
+anyenv init - fish | source
+
+if not type -q nodenv
+  echo "# Could not find nodenv. Will setup:"
+  anyenv install nodenv
 end
+
+nodenv init - | source
 
 if type -q direnv
   direnv hook fish | source

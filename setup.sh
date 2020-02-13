@@ -2,7 +2,7 @@
 
 set -o pipefail
 
-# docker
+pwd
 
 declare failed_commands=""
 function trace {
@@ -56,10 +56,10 @@ echo_step 'brewfile'
 
 trace brew bundle --file=~/.config/Brewfile
 
-if [ ! -t 1 ];
-echo_step 'clone .config'
+if [ ! -t 1 ]; then
+  echo_step 'clone .config'
 
-trace hub clone --depth=1 https://github.com/karszawa/.config
+  trace git clone --depth=1 https://github.com/karszawa/.config
 fi
 
 echo_step 'Touch ID'
@@ -71,11 +71,6 @@ echo_step 'change shell to fish'
 
 trace echo /usr/local/bin/fish >> /etc/shells
 trace chsh -s /usr/local/bin/fish
-
-echo_step 'anyenv'
-
-trace anyenv inst   all --init
-trace anyenv install nodenv
 
 echo_step 'Visual Studio Code'
 
