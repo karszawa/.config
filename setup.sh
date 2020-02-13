@@ -29,6 +29,10 @@ cd ~
 
 echo_step 'copy default files'
 
+if [ ! -f ~/.ssh ]
+  mkdir ~/.ssh
+fi
+
 trace cat ~/.config/defaults/ssh_config >> ~/.ssh/config
 
 echo_step 'link'
