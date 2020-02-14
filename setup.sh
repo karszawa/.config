@@ -29,9 +29,11 @@ function enter_to_continue {
   read -p "PRESS ENTER TO CONTINUE:"
 }
 
-echo "Do you enable iCloud sync?"
+if [ ! -z "$CI" ]; then
+  echo "Do you enable iCloud sync?"
 
-enter_to_continue
+  enter_to_continue
+fi
 
 cd ~
 
@@ -81,22 +83,24 @@ shdo -s
 trace sudo echo /usr/local/bin/fish >> /etc/shells
 trace sudo chsh -s /usr/local/bin/fish
 
-echo_step 'Visual Studio Code'
+if [ ! -z "$CI" ]; then
+  echo_step 'Visual Studio Code'
 
-echo "Install Settings Sync via https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync"
-echo "and use this gist id 3b3e44582a7703adcbf870e8d1325c37"
+  echo "Install Settings Sync via https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync"
+  echo "and use this gist id 3b3e44582a7703adcbf870e8d1325c37"
 
-echo_step 'Alfread'
+  echo_step 'Alfread'
 
-echo 'Open Alfread prefereces and Open Advanced > Set preferences folder then set target folder to ~/Documents/Sync'
+  echo 'Open Alfread prefereces and Open Advanced > Set preferences folder then set target folder to ~/Documents/Sync'
 
-enter_to_continue
+  enter_to_continue
 
-echo_step 'iTerm2'
+  echo_step 'iTerm2'
 
-echo 'Open iTerm2 and check "Load preferences from a custom folder or URL" then fill text box with "~/Documents/Sync"'
+  echo 'Open iTerm2 and check "Load preferences from a custom folder or URL" then fill text box with "~/Documents/Sync"'
 
-enter_to_continue
+  enter_to_continue
+fi
 
 if [ failed_commands == "" ]; then
   echo 'DONE'
