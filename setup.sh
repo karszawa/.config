@@ -79,7 +79,7 @@ curl -sL https://gist.github.com/kawaz/d95fb3b547351e01f0f3f99783180b9f/raw/inst
 
 echo_step 'change shell to fish'
 
-shdo -s
+sudo -s
 trace sudo echo /usr/local/bin/fish >> /etc/shells
 trace sudo chsh -s /usr/local/bin/fish
 
