@@ -79,9 +79,11 @@ curl -sL https://gist.github.com/kawaz/d95fb3b547351e01f0f3f99783180b9f/raw/inst
 
 echo_step 'change shell to fish'
 
-sudo -s
-trace sudo echo /usr/local/bin/fish >> /etc/shells
-trace sudo chsh -s /usr/local/bin/fish
+if [ ! -z "$CI" ]; then
+  sudo -s
+  trace sudo echo /usr/local/bin/fish >> /etc/shells
+  trace sudo chsh -s /usr/local/bin/fish
+fi
 
 if [ ! -z "$CI" ]; then
   echo_step 'Visual Studio Code'
