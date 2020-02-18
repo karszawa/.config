@@ -1,0 +1,26 @@
+#!/bin/sh
+
+# https://mercari.slack.com/archives/C4UKX2VEJ/p1574749408143200?thread_ts=1574159519.094200
+
+HOST=${HOST:="api-jp.fury-panda.dev5s.com"}
+
+UUID="$(uuidgen | tr -d '-')"
+
+REFRESH_TOKEN="$(curl -s "https://$HOST/auth/refresh_token" \
+  -H 'Accept: application/json' \
+  -H 'User-Agent: Mercari_r/999999' \
+  -H 'X-APP-VERSION: 999999' \
+  -H 'X-PLATFORM: ios' \
+  -XPOST \
+  -F "uuid=$UUID" | jq -r '.data.refresh_token')"
+
+ACCESS_TOKEN="$(curl -s "https://$HOST/auth/access_token" \
+  -H 'Accept: application/json' \
+  -H 'User-Agent: Mercari_r/999999' \
+  -H 'X-APP-VERSION: 999999' \
+  -H 'X-PLATFORM: ios' \
+  -XPOST \
+  -F "uuid=$UUID" \
+  -F "refresh_token=$REFRESH_TOKEN" | jq -r .data.access_token)"
+
+echo $ACCESS_TOKEN

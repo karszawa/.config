@@ -26,6 +26,5 @@ alias j='autojump'
 alias skim='open -a /Applications/Skim.app'
 alias less='less -R'
 alias t='tig'
-alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
 alias scripts=list-scripts
 alias k=kubectl
