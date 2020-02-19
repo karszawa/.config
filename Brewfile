@@ -85,10 +85,14 @@ cask "iterm2"
 cask "java"
 cask "karabiner-elements"
 cask "ngrok"
-cask "rectangle"
 cask "sequel-pro"
 cask "sketch"
 cask "slack"
 cask "spark"
 cask "tableplus"
 cask "visual-studio-code"
+
+mas "Xcode", id: 497799835
+mas "Spark", id: 1176895641
+mas "The Unarchiver", id: 425424353
+mas "Magnet", id: 441258766
