@@ -8,6 +8,15 @@ set -x GO111MODULE on
 set -x LESS '-g -i -M -R -S -W -z-4 -x4'
 set -x PAGER less
 
+# https://github.com/franciscolourenco/done
+set -x __done_min_cmd_duration 30000
+
+if not [ -d $HOME/.kube ]
+  mkdir -p $HOME/.kube
+end
+
+set -x KUBECONFIG $HOME/.kube/config
+
 set XDG_CONFIG_HOME $HOME/.config
 
 source ~/.config/fish/path.fish

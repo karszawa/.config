@@ -28,3 +28,4 @@ alias less='less -R'
 alias t='tig'
 alias scripts=list-scripts
 alias k=kubectl
+alias cd=enhancd
