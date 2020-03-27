@@ -1,0 +1,7 @@
+{
+  ".CodeMirror.emacs-mode textarea":
+    "ctrl-2": "emacs-mode:set-mark"
+    "command-x": "emacs-mode:kill-region"
+    "command-c": ""
+    "escape": "emacs-mode:quit"
+}

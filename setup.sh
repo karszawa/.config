@@ -53,6 +53,7 @@ trace ln -sf ~/.config/.gitattributes ~/.gitattributes
 trace ln -sf ~/.config/.gitignore-global ~/.gitignore-global
 trace ln -sf ~/Documents/Sync/keys/id_rsa .ssh/id_rsa
 trace ln -sf ~/Documents/Sync/keys/id_rsa.pub .ssh/id_rsa.pub
+trace ln -sf ~/.config/inkdrop/keymap.cson ~/Library/Application\ Support/inkdrop/keymap.cson
 
 echo_step 'xcodebuild'
 
